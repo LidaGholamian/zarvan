@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
-import { DesktopHeader } from "../desktop-header";
-import { MobileNav } from "../mobile-nav";
+import { DesktopHeader } from "./desktop-header";
+import { MobileNav } from "./mobile-nav";
 
 export const Header: React.FC = () => {
   const [isDesktop, setIsDesktop] = useState(false);

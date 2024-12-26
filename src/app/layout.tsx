@@ -54,7 +54,7 @@ export default function RootLayout({
   return (
     <html dir="rtl" className={vazirmatn.className}>
       <body
-        className={`min-h-screen max-h-screen grid grid-rows-[80px_1fr_auto] container ${
+        className={`min-h-screen max-h-screen grid grid-rows-[80px_1fr_auto] overflow-x-hidden container ${
           process.env.NODE_ENV == "development" ? "debug-screens" : ""
         }`}
       >
