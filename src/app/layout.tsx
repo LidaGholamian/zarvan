@@ -1,16 +1,9 @@
 import type { Metadata } from "next";
-import { Figtree } from "next/font/google";
+
 import localFont from "next/font/local";
 import "./globals.css";
 import { Header } from "./components/header";
 import { Footer } from "./components/footer";
-
-const figtree = Figtree({
-  display: "swap",
-  subsets: ["latin"],
-  variable: "--font-figtree",
-  weight: ["300", "400", "500", "600", "700", "700", "800", "900"],
-});
 
 const vazirmatn = localFont({
   src: [

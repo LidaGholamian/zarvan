@@ -10,7 +10,6 @@ import {
   FaTelegram,
   FaWhatsapp,
 } from "react-icons/fa";
-import { TbBrandWhatsappFilled } from "react-icons/tb";
 
 export const MobileFooter: React.FC = () => {
   const image = [image1, image2, image3, image4];
