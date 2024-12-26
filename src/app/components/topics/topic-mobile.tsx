@@ -91,7 +91,7 @@ export const TopicMobile: React.FC = () => {
           تمام مطالب پیشنهادی زروان تریپ
         </h1>
       </div>
-      <div className="pl-5">
+      <div className="pl-7">
         <Swiper
           className="w-[450px] flex flex-col"
           spaceBetween={30}
@@ -112,7 +112,7 @@ export const TopicMobile: React.FC = () => {
           </div>
         </Swiper>
       </div>
-      <div className="pr-5">
+      <div className="pr-7">
         <Swiper
           className="w-[450px] flex flex-col"
           spaceBetween={30}

@@ -3,13 +3,13 @@ import Image from "next/image";
 
 export const DesktopSlider: React.FC<Blog> = ({ image, title, content }) => {
   return (
-    <div className="flex flex-col justify-center items-center bg-white rounded-lg pr-4 pl-4 pt-2">
+    <div className="flex flex-col justify-center items-start bg-white rounded-2xl pr-3 pl-3 pt-2">
       <Image
         src={image}
-        width={315}
+        width={350}
         height={155}
         alt="city"
-        className="rounded-lg"
+        className="rounded-2xl"
       />
       <div className="flex flex-col justify-center items-start gap-2">
         <div className="flex flex-col justify-center items-start pt-2">
