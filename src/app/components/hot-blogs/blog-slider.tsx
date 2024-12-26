@@ -85,8 +85,8 @@ export const BlogSlider: React.FC = () => {
     <Swiper
       className="container flex justify-center items-center h-[480px] mb-20"
       direction={"vertical"}
-      spaceBetween={5}
-      slidesPerView={2.2}
+      spaceBetween={7}
+      slidesPerView={2.3}
       freeMode={true}
       scrollbar={true}
       mousewheel={true}
