@@ -6,7 +6,7 @@ import { Tab } from "@/types/tab.type";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import { A11y, Navigation, Pagination } from "swiper/modules";
+import { A11y, Navigation } from "swiper/modules";
 
 import "swiper/swiper-bundle.css";
 
