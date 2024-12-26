@@ -12,7 +12,6 @@ import {
 } from "react-icons/fa";
 
 export const MobileFooter: React.FC = () => {
-  const image = [image1, image2, image3, image4];
   return (
     <div className="flex flex-col justify-center items-start border-t-4 border-t-secondary bg-primary text-white gap-6 mt-20 p-4">
       <div className="flex flex-col justify-center items-start gap-4">
