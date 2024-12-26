@@ -5,21 +5,20 @@ import { useState } from "react";
 import { Tab } from "@/types/tab.type";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Swiper as SwiperType } from "swiper";
+
 import { A11y, Navigation, Pagination } from "swiper/modules";
 
 import "swiper/swiper-bundle.css";
 
 import "swiper/css";
 import "swiper/css/navigation";
-import "swiper/css/pagination";
+
 import { Blogs } from "../hot-blogs/blogs";
-import { useRef } from "react";
+
 import { SwiperNavButtons } from "../slider/swiper-nav-buttons";
 
 export const Tabs: React.FC = () => {
   const [activeTab, setActiveTab] = useState<number>(0);
-  const swiperRef = useRef<SwiperType | null>(null);
 
   const tabs: Tab[] = [
     { id: 1, label: "همه مطالب", content: <Blogs /> },
