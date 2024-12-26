@@ -86,7 +86,7 @@ export const BlogSlider: React.FC = () => {
       className="container flex justify-center items-center h-[480px] mb-20"
       direction={"vertical"}
       spaceBetween={5}
-      slidesPerView={2.3}
+      slidesPerView={2.2}
       freeMode={true}
       scrollbar={true}
       mousewheel={true}
