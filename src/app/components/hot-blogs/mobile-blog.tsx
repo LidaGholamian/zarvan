@@ -66,7 +66,7 @@ export const MobileBlogs: React.FC = () => {
     },
   ];
   return (
-    <div className="flex flex-col justify-center items-start gap-6">
+    <div className="flex flex-col justify-center items-start container gap-6">
       <div className="flex justify-center items-center gap-4 pr-4">
         <Image
           src="/images/hot-blogs.png"

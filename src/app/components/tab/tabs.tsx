@@ -5,15 +5,21 @@ import { useState } from "react";
 import { Tab } from "@/types/tab.type";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
+import { Swiper as SwiperType } from "swiper";
+import { A11y, Navigation, Pagination } from "swiper/modules";
+
 import "swiper/swiper-bundle.css";
 
 import "swiper/css";
+import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Blogs } from "../hot-blogs/blogs";
+import { useRef } from "react";
+import { SwiperNavButtons } from "../slider/swiper-nav-buttons";
 
 export const Tabs: React.FC = () => {
   const [activeTab, setActiveTab] = useState<number>(0);
+  const swiperRef = useRef<SwiperType | null>(null);
 
   const tabs: Tab[] = [
     { id: 1, label: "همه مطالب", content: <Blogs /> },
@@ -37,8 +43,10 @@ export const Tabs: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className="flex flex-col justify-center items-center container">
       <Swiper
+        dir="rtl"
+        autoHeight={true}
         breakpoints={{
           0: {
             slidesPerView: 2.5,
@@ -56,32 +64,28 @@ export const Tabs: React.FC = () => {
             spaceBetween: 10,
           },
         }}
-        className="container flex justify-center items-center m-2 w-[400px] md:w-full lg:w-full xl:w-full"
-        pagination={{
-          dynamicBullets: true,
-          clickable: true,
-        }}
-        modules={[Pagination]}
+        className="container flex justify-center items-center w-[400px] md:w-full lg:w-full xl:w-full"
+        modules={[Navigation, A11y]}
       >
-        <div className="flex justify-center items-center">
-          {tabs.map((tab, index) => (
-            <SwiperSlide key={tab.id}>
+        {tabs.map((tab, index) => (
+          <SwiperSlide key={tab.id}>
+            <div
+              onClick={() => handleTabelClick(index)}
+              className="pb-6 pr-4 pl-4"
+            >
               <div
-                onClick={() => handleTabelClick(index)}
-                className="pb-6 pr-4 pl-4"
+                className={`rounded-md p-2 w-[145px] flex justify-center items-center cursor-pointer ${
+                  index === activeTab ? "bg-primary text-white" : ""
+                }`}
               >
-                <div
-                  className={`rounded-md p-2 w-[145px] flex justify-center items-center cursor-pointer ${
-                    index === activeTab ? "bg-primary text-white" : ""
-                  }`}
-                >
-                  {tab.label}
-                </div>
+                {tab.label}
               </div>
-            </SwiperSlide>
-          ))}
-        </div>
+            </div>
+          </SwiperSlide>
+        ))}
+        <SwiperNavButtons />
       </Swiper>
+
       {tabs.map((tab, index) => (
         <div
           className="w-full mt-6"

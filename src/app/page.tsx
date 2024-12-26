@@ -5,7 +5,7 @@ import { Topics } from "./components/topics";
 
 export default function Home() {
   return (
-    <div className="flex flex-col justify-center items-center container bg-grey-content w-full gap-8">
+    <div className="flex flex-col justify-center items-center bg-grey-content gap-8">
       <HomeHereoSection />
       <Tabs />
       <Topics />
